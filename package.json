@@ -1,0 +1,21 @@
+{
+  "name": "JiraReleaseNotesToHTML",
+  "version": "0.1.0",
+  "description": "JiraReleaseNotesToHTML",
+  "main": "releaseNote.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "Node.js",
+    "JIRA",
+    "Jenkins"
+  ],
+  "author": "Hugo Capocci",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "swig": "^1.4.2"
+  }
+}

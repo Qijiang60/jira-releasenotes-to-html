@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>JIRA: Release Notes</title>
+<style type="text/css">
+body {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 12px;
+}
+
+h3 {
+	border-bottom: 1px solid #ccc;
+	margin: 0 0.5em;
+}
+
+li {
+	margin: 0 0.5em;
+	list-style-type: square;
+}
+
+ul {
+	padding-left: 1.5em;
+}
+
+code {
+	display: inline-block;
+	white-space: no-wrap;
+	background: white;
+	font-size: .8em;
+	line-height: 1.5em;
+	color: #555;
+	border: 1px solid #DDD;
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	border-radius: 0.4em;
+	padding: 0 .3em;
+	margin: -1px 0;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+{% for issueType in issueTypes %}
+	<h2>
+		{{issueType.title}}
+	</h2>
+	<ul> 
+	   {% for issue in issueType.issues %}
+		<li>[<a href="http://{{url}}/browse/{{issue.id}}" target="_blank">{{issue.id}}</a>] {{issue.summary}}</li>
+		{% endfor %}
+	</ul>
+{% endfor %}
+
+</body>
+
+</html>
